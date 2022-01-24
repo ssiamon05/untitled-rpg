@@ -1,0 +1,42 @@
+{
+    "attacks": [
+        {
+            "id": 1,
+            "attackInfo": {
+                "name": "Strike",
+                "damage": 15,
+                "accuracy": 95,
+                "effects":[]
+            }
+        },
+        {
+            "id": 2,
+            "attackInfo": {
+                "name": "Charge",
+                "damage": 30,
+                "accuracy": 75,
+                "effects":[]
+            }
+        }
+    ],
+    "spells": [
+        {
+            "id": 1,
+            "attackInfo": {
+                "name": "Bolt",
+                "damage": 20,
+                "accuracy": 90,
+                "effects":[]
+            }
+        },
+        {
+            "id": 2,
+            "attackInfo": {
+                "name": "Fire Ball",
+                "damage": 25,
+                "accuracy": 85,
+                "effects":[]
+            }
+        }
+    ]
+}
