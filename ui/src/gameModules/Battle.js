@@ -1,5 +1,5 @@
 function Battle(props) {
-    return(
+    return (
         <div>
             <h3>BATTLE TIME</h3>
         </div>

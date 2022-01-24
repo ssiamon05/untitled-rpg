@@ -1,7 +1,7 @@
 const Attack = require('./Attack');
 
-class Spell extends Attack{
-    constructor(damage = 0, accuracy = 100, effects=[], manaNeeded=10) {
+class Spell extends Attack {
+    constructor(damage = 0, accuracy = 100, effects = [], manaNeeded = 10) {
         super(damage, accuracy);
         this._manaNeeded = manaNeeded;
     }

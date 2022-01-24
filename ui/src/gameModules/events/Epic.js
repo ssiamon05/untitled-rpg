@@ -1,5 +1,5 @@
 function Epic(props) {
-    return(
+    return (
         <div>
             <h3>This is an Epic event!</h3>
         </div>

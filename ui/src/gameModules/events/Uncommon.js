@@ -1,5 +1,5 @@
 function Uncommon(props) {
-    return(
+    return (
         <div>
             <h3>This is an uncommon event!</h3>
         </div>

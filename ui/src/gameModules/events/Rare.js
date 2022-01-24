@@ -1,5 +1,5 @@
 function Rare(props) {
-    return(
+    return (
         <div>
             <h3>This is a rare event!</h3>
         </div>

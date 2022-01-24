@@ -1,21 +1,21 @@
 const Monster = require('../NPC/Monster');
 
-class Player extends Monster{
-    constructor(health=100, status=[], maxHealth=100, mana=50, maxMana=50, name='',actions= {attacks:[],spells:[]}, bag = {consumables:[], relics:[]}, job = null) {
+class Player extends Monster {
+    constructor(health = 100, status = [], maxHealth = 100, mana = 50, maxMana = 50, name = '', actions = { attacks: [], spells: [] }, bag = { consumables: [], relics: [] }, job = null) {
         super(health, status, maxHealth, name, mana, maxMana, actions);
         this._bag = bag;
         this._job = job;
     }
 
     // GETTERS
-    get bag(){
+    get bag() {
         return this._bag;
     }
 
-    get job(){ 
+    get job() {
         return this._job;
     }
-    
+
     // SETTERS
     setBag(bag) {
         this._bag = bag;
@@ -28,7 +28,7 @@ class Player extends Monster{
 
     // CLASS FUNCTIONS
     addToBag(item, type) {
-        switch(type) {
+        switch (type) {
             case 'consumable':
                 this.setBag({
                     ... this.bag(),

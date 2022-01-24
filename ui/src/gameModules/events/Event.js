@@ -5,35 +5,51 @@ import Legendary from './Legendary';
 
 function Event(props) {
     const rarity = Math.random();
-    console.log(rarity);
+
+    function continueTraveling() {
+        props.uGameState({
+            ...props.gameState,
+            movesMade: props.gameState.movesMade + 1,
+            hunger: props.gameState.hunger - 5,
+            eventProb: Math.random()
+        })
+    }
+
+    function ContinueTravel() {
+        return <button onClick={continueTraveling}>Continue Traveling</button>;
+    }
 
     if (rarity < 0.5) {
-        return(
+        return (
             <div>
-                <Uncommon gameState={props.gameState} uGameState={props.uGameState}/>
+                <Uncommon gameState={props.gameState} uGameState={props.uGameState} />
+                <ContinueTravel />
             </div>
         )
     } else if (rarity < 0.85) {
-        return(
+        return (
             <div>
-                <Rare gameState={props.gameState} uGameState={props.uGameState}/>
+                <Rare gameState={props.gameState} uGameState={props.uGameState} />
+                <ContinueTravel />
             </div>
         )
     } else if (rarity < 0.95) {
-        return(
+        return (
             <div>
-                <Epic gameState={props.gameState} uGameState={props.uGameState}/>
+                <Epic gameState={props.gameState} uGameState={props.uGameState} />
+                <ContinueTravel />
             </div>
         )
     } else if (rarity < 1) {
-        return(
+        return (
             <div>
-                <Legendary gameState={props.gameState} uGameState={props.uGameState}/>
+                <Legendary gameState={props.gameState} uGameState={props.uGameState} />
+                <ContinueTravel />
             </div>
         )
     }
-    
-    return(
+
+    return (
         <div>
             <h2>An error has occured.</h2>
         </div>
